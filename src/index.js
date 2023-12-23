@@ -6,25 +6,14 @@ import {
   Route,
   RouterProvider,
 } from 'react-router-dom';
-import { Provider } from 'react-redux';
+import { Provider, useDispatch } from 'react-redux';
 
 import Layout from './components/layout';
 import { store } from './store';
+import { fetchMyProfile } from './reducers/profile';
 import './index.css';
 
 function Home() {
-  useEffect(() => {
-    async function fetchData() {
-      const profileDataResponse = await fetch(
-        'https://vamshikampalli.github.io/profile.json'
-      );
-      const profileData = await profileDataResponse.json();
-
-      console.log(profileData);
-    }
-
-    fetchData();
-  }, []);
   return (
     <>
       <h1>Home</h1>
@@ -46,11 +35,21 @@ const router = createBrowserRouter(
   { basename: '/my-profile' }
 );
 
+function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchMyProfile());
+  }, [dispatch]);
+
+  return <RouterProvider router={router} />;
+}
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <RouterProvider router={router} />
+      <App />
     </Provider>
   </React.StrictMode>
 );
