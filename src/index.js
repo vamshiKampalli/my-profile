@@ -6,7 +6,10 @@ import {
   Route,
   RouterProvider,
 } from 'react-router-dom';
-import { Outlet } from 'react-router-dom';
+import { Provider } from 'react-redux';
+
+import Layout from './components/layout';
+import { store } from './store';
 import './index.css';
 
 function Home() {
@@ -25,24 +28,12 @@ function Home() {
   return (
     <>
       <h1>Home</h1>
-      <Outlet />
     </>
   );
 }
 
 function Projects() {
   return <h1>Projects</h1>;
-}
-
-function Layout() {
-  return (
-    <div>
-      <h1>User Dashboard</h1>
-      <main>
-        <Outlet />
-      </main>
-    </div>
-  );
 }
 
 const router = createBrowserRouter(
@@ -58,6 +49,8 @@ const router = createBrowserRouter(
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
   </React.StrictMode>
 );
