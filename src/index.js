@@ -51,7 +51,8 @@ const router = createBrowserRouter(
       <Route index element={<Home />}></Route>
       <Route path="/projects" element={<Projects />} />
     </Route>
-  )
+  ),
+  { basename: '/my-profile' }
 );
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
