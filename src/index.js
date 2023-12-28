@@ -9,21 +9,11 @@ import {
 import { Provider, useDispatch } from 'react-redux';
 
 import Layout from './components/layout';
+import Home from './components/home';
+import Projects from './components/projects';
 import { store } from './store';
 import { fetchMyProfile } from './reducers/profile';
 import './index.css';
-
-function Home() {
-  return (
-    <>
-      <h1>Home</h1>
-    </>
-  );
-}
-
-function Projects() {
-  return <h1>Projects</h1>;
-}
 
 const router = createBrowserRouter(
   createRoutesFromElements(

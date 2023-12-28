@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
-import './navbar.css';
+import styles from './navbar.module.css';
 
 const Hamburger = () => (
   <svg
@@ -50,19 +50,31 @@ function Navbar() {
   };
 
   return (
-    <nav className="navbar">
-      <div className="container">
-        <div className="logo">Vamshi Kampalli</div>
-        <div className="menu-icon" onClick={handleShowNavbar}>
+    <nav className={styles.navbar}>
+      <div className={styles.container}>
+        <div className={styles.logo}>Vamshi Kampalli</div>
+        <div className={styles.menu_icon} onClick={handleShowNavbar}>
           <Hamburger />
         </div>
-        <div className={`nav-elements  ${showNavbar && 'active'}`}>
+        <div
+          className={`${styles.nav_elements} ${showNavbar && styles.active}`}
+        >
           <ul>
             <li>
-              <NavLink to="/">Home</NavLink>
+              <NavLink
+                to="/"
+                className={({ isActive }) => (isActive ? styles.active : '')}
+              >
+                Home
+              </NavLink>
             </li>
             <li>
-              <NavLink to="/projects">Projects</NavLink>
+              <NavLink
+                to="/projects"
+                className={({ isActive }) => (isActive ? styles.active : '')}
+              >
+                Projects
+              </NavLink>
             </li>
           </ul>
         </div>
