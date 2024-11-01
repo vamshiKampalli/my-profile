@@ -41,7 +41,7 @@ function Projects() {
                   <span style={{ fontWeight: 'bold' }}>Tech stack: </span>
                   {project.techstack.join(', ')}
                 </p>
-                {experience.projects.length-1 != index && <hr />}
+                {experience.projects.length-1 !== index && <hr />}
               </div>
             ))}
           </div>

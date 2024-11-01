@@ -124,7 +124,7 @@ function Resume({profileData}){
 
     return (
         <>
-        // Use [PDFViewer] to  render the PDF in development mode. This path is served on [my-profile/resume]
+        {/* Use [PDFViewer] to  render the PDF in development mode. This path is served on [my-profile/resume] */}
         { /* <PDFViewer width="1000" height="650" className="app"> */}
             <Document>
                 <Page size="A4" style={styles.page}>

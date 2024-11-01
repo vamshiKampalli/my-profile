@@ -11,7 +11,7 @@ import { Provider, useDispatch } from 'react-redux';
 import Layout from './components/layout';
 import Home from './components/home';
 import Projects from './components/projects';
-import Resume from './components/resume';
+// import Resume from './components/resume';
 import { store } from './store';
 import { fetchMyProfile } from './reducers/profile';
 import './index.css';
