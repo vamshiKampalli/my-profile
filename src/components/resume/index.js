@@ -63,7 +63,7 @@ function Resume({profileData}){
         skills: {
             display: 'flex',
             flexDirection: 'row',
-            justifyContent:'space-around'
+            gap: 100
         },
 
         experience: {
