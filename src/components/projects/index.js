@@ -33,7 +33,7 @@ function Projects() {
             <h4>{experience.title}</h4>
             <hr />
             <h4>Projects</h4>
-            {experience.projects?.map((project) => (
+            {experience.projects?.map((project, index) => (
               <div key={project.name} className={styles.project_detail}>
                 <h4>{project.name}</h4>
                 <p>{project.description}</p>
@@ -41,7 +41,7 @@ function Projects() {
                   <span style={{ fontWeight: 'bold' }}>Tech stack: </span>
                   {project.techstack.join(', ')}
                 </p>
-                {experience.projects.length > 1 && <hr />}
+                {experience.projects.length-1 != index && <hr />}
               </div>
             ))}
           </div>

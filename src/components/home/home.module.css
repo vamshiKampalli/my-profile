@@ -43,7 +43,7 @@
     border-radius: 25px;
     background: #ffffff;
     box-shadow: 0 0 10px #9e9fa5;
-    width: 45%;
+    width: 40%;
     padding-bottom: 10px;
     min-height: 150px;
     min-width: 300px;
@@ -84,20 +84,6 @@
         }
       }
     }
-  }
-
-  .download_link {
-    text-decoration: none;
-    display: block;
-    font-size: 16px;
-    width: 120px;
-    padding: 5px;
-    background: #fff;
-    margin: 10px auto;
-    border-radius: 5px;
-    box-shadow: 0 0 10px #9e9fa5;
-    color: #000;
-    border-bottom: 2px solid #506bf2;
   }
 }
 

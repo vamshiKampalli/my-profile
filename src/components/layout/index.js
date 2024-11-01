@@ -11,8 +11,7 @@ function Layout() {
     <div>
       <Navbar />
       <main className={styles.layout}>
-        {profileData.isLoading && <Loader />}
-        <Outlet />
+        {profileData.isLoading ? <Loader /> : <Outlet />}
       </main>
     </div>
   );
