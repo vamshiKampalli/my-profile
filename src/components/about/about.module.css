@@ -15,24 +15,24 @@
         width: 800px;
         margin-left: 50px;
 
-        ul {
+        .contact_fields {
             list-style: none;
             display: flex;
             flex-direction: column;
             gap: 20px;
             padding: 0;
+        }
 
-            li {
-                display: flex;
-                justify-content: space-between;
+        .contact_field {
+            display: flex;
+            justify-content: space-between;
 
-                .label {
-                    font-weight: bold;
-                }
+            .label {
+                font-weight: bold;
+            }
 
-                .value {
-                    color: #00000080;
-                }
+            .value {
+                color: #00000080;
             }
         }
     }
