@@ -27,24 +27,24 @@ const AboutMe = ({profileData}) => {
         <h2 className={styles.about_me}>About Me</h2>
         <section className={styles.about_me_container}>
             <div className={styles.contact_info}>
-                <ul className={styles.contact_fields}>
-                    <li className={styles.contact_field}>
+                <div className={styles.contact_fields}>
+                    <div className={styles.contact_field}>
                         <span className={styles.label}>Full Name: </span>
                         <span  className={styles.value}>{profileData.name}</span>
-                    </li>
-                    <li className={styles.contact_field}>
+                    </div>
+                    <div className={styles.contact_field}>
                         <span className={styles.label}> Phone: </span>
                         <span  className={styles.value}>{profileData.mobile}</span> 
-                    </li>
-                    <li className={styles.contact_field}>
+                    </div>
+                    <div className={styles.contact_field}>
                         <span className={styles.label}>Email: </span>
                         <span  className={styles.value}>{profileData.email}</span>
-                    </li>
-                    <li className={styles.contact_field}>
+                    </div>
+                    <div className={styles.contact_field}>
                         <span className={styles.label}>Location: </span>
                         <span  className={styles.value}>{profileData.currentLocation}</span>
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </div>
             <div className={styles.brief_intro}>
                 <h2>Hello There!</h2>

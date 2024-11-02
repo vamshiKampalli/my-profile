@@ -16,7 +16,6 @@
         margin-left: 50px;
 
         .contact_fields {
-            list-style: none;
             display: flex;
             flex-direction: column;
             gap: 20px;
