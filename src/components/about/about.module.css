@@ -16,14 +16,14 @@
         margin-left: 50px;
 
         .contact_fields {
-            display: flex;
+            display: flex !important;
             flex-direction: column;
             gap: 20px;
             padding: 0;
         }
 
         .contact_field {
-            display: flex;
+            display: flex !important;
             justify-content: space-between;
 
             .label {
