@@ -72,5 +72,9 @@
         .contact_info {
             width: auto;
         }
+
+        .brief_intro {
+            margin-top: 24px;
+        }
     }
 }
