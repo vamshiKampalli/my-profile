@@ -15,5 +15,12 @@ const getMonthAndYear = (dateStr) => {
     return date.toLocaleString('default', { month: 'long', year: 'numeric' });
 
 };
-export {getTotalExperience, getMonthAndYear};
+
+const replaceYearofExperience = (summaryStr, startDateStr) => {
+    if(!summaryStr) return;
+
+    return summaryStr.replace('REPLACE_EXPERIENCE', getTotalExperience(new Date(startDateStr)))
+}
+
+export {getTotalExperience, getMonthAndYear, replaceYearofExperience};
 

@@ -1,0 +1,76 @@
+.about_me {
+    font-size: 40px;
+    line-height: 1.5;
+    font-family: "Space Mono", Arial, serif;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+}
+
+.about_me_container {
+    display: flex;
+    font-family: "Space Mono", Arial, serif;
+
+    .contact_info {
+        width: 800px;
+        margin-left: 50px;
+
+        ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 0;
+
+            li {
+                display: flex;
+                justify-content: space-between;
+
+                .label {
+                    font-weight: bold;
+                }
+
+                .value {
+                    color: #00000080;
+                }
+            }
+        }
+    }
+
+    .brief_intro {
+        padding: 0 50px;
+        
+        h2 {
+            font-weight: 400;
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.7;
+            color: #4d4d4d;
+        }
+
+        .download_button {
+            background: #FF9000;
+            color: #FFF;
+            text-transform: uppercase;
+            padding: 18px 36px;
+            border-radius: 30px;
+            text-decoration: none;
+            margin: 16px 0;
+            display: inline-block;
+        }
+    }
+
+}
+
+@media (max-width: 1200px) {
+    .about_me_container {
+        flex-wrap: wrap;
+
+        .contact_info {
+            width: auto;
+        }
+    }
+}

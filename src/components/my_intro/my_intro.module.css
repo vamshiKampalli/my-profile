@@ -1,0 +1,76 @@
+.header {
+   background-image: url('../../../public/assets/images/cover_bg_3.jpg');
+   position: relative;
+   color: #fff;
+}
+
+.overlay {
+    background-color: #ff9000e6;
+    height: 100vh;
+}
+
+.headerContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    top: 140px;
+}
+
+.thumbnail {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-image: url('../../../public/assets/images/vam_thumbnail.png');
+    background-size: cover;
+}
+
+.name {
+    font-family: "Kaushan Script", cursive;
+    margin-bottom: 30px;
+    font-size: 50px;
+    line-height: 1.3;
+    font-weight: 300;
+    transform: rotate(-5deg);
+    padding: 0 20px;
+}
+
+.name::before {
+    position: absolute;
+    top: 35px;
+    left: 0;
+    width: 30px;
+    height: 4px;
+    content: '';
+    background: red;
+    margin-left: -20px;
+}
+
+.name::after {
+    position: absolute;
+    top: 35px;
+    right: 0;
+    width: 30px;
+    height: 4px;
+    content: '';
+    background: red;
+    margin-right: -35px;
+}
+
+.job {
+    font-family: 'Kaushan Script';
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    margin: 0;
+}
+
+.social_links {
+    gap: 30px;
+    display: flex;
+    margin-top: 25px;
+    a {
+        color: #fff;
+        font-size: 30px;
+    }
+}

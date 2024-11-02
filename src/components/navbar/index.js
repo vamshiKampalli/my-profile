@@ -52,7 +52,7 @@ function Navbar() {
   return (
     <nav className={styles.navbar}>
       <div className={styles.container}>
-        <div className={styles.logo}>Vamshi Kampalli</div>
+        <div className={styles.logo}>VK</div>
         <div className={styles.menu_icon} onClick={handleShowNavbar}>
           <Hamburger />
         </div>
