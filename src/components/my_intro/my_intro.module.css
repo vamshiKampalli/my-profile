@@ -22,8 +22,8 @@
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    background-image: url('../../../public/assets/images/vam_thumbnail.png');
-    background-size: cover;
+    background-image: url('../../../public/assets/images/vam_thumbnail.jpg');
+    background-size: 145%;
 }
 
 .name {
