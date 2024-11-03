@@ -2,7 +2,7 @@ import React from 'react'
 import { Font, Link, Text, View, Page, Document, StyleSheet } from '@react-pdf/renderer';
 // [PDFViewer] is from '@react-pdf/renderer'
 
-import {getTotalExperience, getMonthAndYear} from '../../util';
+import {replaceYearofExperience, getMonthAndYear} from '../../util';
 import '../../index.css';
 
 Font.register({
@@ -140,7 +140,7 @@ function Resume({profileData}){
                         </View>
                     </View>
                     <View style={styles.introduction}>
-                        <Text>Web application Developer with {getTotalExperience(new Date(profileData.dateOfJoiningIT))}+ years of experience, skilled in all stages of advanced web development. Proficient in user interface development, testing, debugging, and equipped with a diverse skill-set. Has ability to self-manage and collaborate effectively in an agile team setting.</Text>
+                        <Text>{replaceYearofExperience(profileData.summary, profileData.dateOfJoiningIT)}</Text>
                     </View>
 
                     <View>
